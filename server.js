@@ -9,12 +9,12 @@ app.use(express.json());
 const path = require("path");
 
 
-/*if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("build"));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
-}*/
+}
 
 app.get("/", (req, res) => {
   res.send("Welcome to eShop website.");
