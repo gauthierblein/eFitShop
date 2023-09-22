@@ -94,7 +94,7 @@ const CheckoutForm = () => {
         elements,
         confirmParams: {
           // Make sure to change this to your payment completion page
-          return_url: "/checkout-success",
+          return_url: "https://efitshop-gbdev.netlify.app/checkout-success",
         },
         redirect: "if_required",
       })
