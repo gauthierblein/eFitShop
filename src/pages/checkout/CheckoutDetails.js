@@ -47,6 +47,11 @@ const CheckoutDetails = () => {
     });
   };
 
+  const copyAdress = (e) => {
+    e.preventDefault()
+    setBillingAddress({...shippingAddress});
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(SAVE_SHIPPING_ADDRESS(shippingAddress))
@@ -142,6 +147,11 @@ const CheckoutDetails = () => {
             {/* BILLING ADDRESS */}
             <Card cardClass={styles.card}>
               <h3>Billing Address</h3>
+              <button 
+                onClick={copyAdress}
+                className="--btn"
+                >copy shipping adress
+              </button>
               <label>Recipient Name</label>
               <input
                 type="text"
